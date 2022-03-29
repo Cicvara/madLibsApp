@@ -5,11 +5,9 @@ let numberOfQuestions = questionArray.length-1;
 let questionCounter = 0;
 
 for (let i = numberOfQuestions; i>=0; i--) {
-    console.log(questionArray[questionCounter]);
+    console.log(questionArray[questionCounter] + ` (${numberOfQuestions} questions left)`);
+    numberOfQuestions--;
     questionCounter++;
-    console.log(i);
-    console.log(questionCounter);
-
 }
 
 
