@@ -5,10 +5,12 @@ let numberOfQuestions = questionArray.length-1;
 let questionCounter = 0;
 
 for (let i = numberOfQuestions; i>=0; i--) {
-    console.log(questionArray[questionCounter] + ` (${numberOfQuestions} questions left)`);
+    userInputs.push(prompt(questionArray[questionCounter] + ` (${numberOfQuestions} questions left)`));
     numberOfQuestions--;
     questionCounter++;
 }
+alert("All done! Ready for your mini summer day story??");
+console.log(userInputs);
 
 
 
