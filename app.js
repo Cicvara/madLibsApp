@@ -4,7 +4,12 @@ let numberOfQuestions = questionArray.length-1;
 let questionCounter = 0;
 
 for (let i = numberOfQuestions; i>=0; i--) {
-    userInputs.push(prompt(questionArray[questionCounter] + ` (${numberOfQuestions} questions left)`));
+    // userInputs.push(prompt(questionArray[questionCounter] + ` (${numberOfQuestions} questions left)`));
+    let promptResult = prompt(`${questionArray[questionCounter]} (${numberOfQuestions} questions left)`);
+    if (promptResult === "") {
+        userInputs.push("-user didn't enter any input-");
+    }
+    userInputs.push(promptResult);
     numberOfQuestions--;
     questionCounter++;
 }
